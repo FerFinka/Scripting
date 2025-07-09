@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject fireballprefab;
+    int coins;
     public Transform attackPoint;
     private int health = 10;
 
@@ -20,6 +21,11 @@ public class Player : MonoBehaviour
     {
         health -= damage;
         print("Здоровье игрока: " + health);
-        
+
+    }
+    public void CollectCoins()
+    {
+        coins++;
+        print("Собранные монеты: " + coins);
     }
 }
